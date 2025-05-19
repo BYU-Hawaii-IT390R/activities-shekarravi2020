@@ -1,1 +1,31 @@
-I love Sofia Benjamin
+# Activity-01: Recursive Directory Scanner
+
+For this assignment, I created two Python scripts:
+
+1. setup_files.py – This script generates a folder structure called `test_root` containing 20 `.txt` files spread across multiple subfolders. It's used to simulate a real-world directory for testing.
+
+2. scan.py – This is a recursive directory scanner that:
+   - Accepts a folder path as a command-line argument
+   - Recursively finds all `.txt` files
+   - Calculates and prints each file’s size in kilobytes
+   - Displays a clean table of file names and sizes
+
+Enhancement Implemented:
+
+I implemented the **Grouped Folder Summary** enhancement. After scanning the `.txt` files, the script also prints a summary that shows:
+- How many `.txt` files were found in each subfolder
+- The total size (in KB) of files in each subfolder
+
+This summary gives a quick overview of how `.txt` files are distributed across the scanned directory.
+
+How to Run:
+
+1. Generate the test structure:
+python setup_files.py
+
+2. Scan the directory:
+python scan.py test_root
+
+
+This was a great introduction to recursive file scanning, command-line arguments, and output formatting in Python.
+Shekar Ravi

@@ -37,3 +37,10 @@ def scan_txt_files(directory):
     for folder, data in sorted(folder_summary.items()):
         print(f"{folder:<20} — {data['count']} files, {data['size']:.1f} KB")
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Recursively scan directory for .txt files.")
+    parser.add_argument("path", help="Path to directory to scan")
+    args = parser.parse_args()
+    scan_txt_files(args.path)
+
+
