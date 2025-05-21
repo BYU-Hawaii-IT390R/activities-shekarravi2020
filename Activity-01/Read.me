@@ -26,6 +26,25 @@ python setup_files.py
 2. Scan the directory:
 python scan.py test_root
 
+Sample Output:
+Scanning: C:\...\test_root
+Found 20 text files:
+
+File                                     Size (KB)
+----------------------------------------------------
+docs/file0.txt                               0.1
+docs/file1.txt                               0.1
+...
+logs/archive/file4.txt                       0.1
+----------------------------------------------------
+Total size: 19.5 KB
+
+Summary:
+  docs/              — 5 files, 4.9 KB
+  logs/              — 5 files, 4.9 KB
+  docs/subfolder/    — 5 files, 4.9 KB
+  logs/archive/      — 5 files, 4.9 KB
+
 
 This was a great introduction to recursive file scanning, command-line arguments, and output formatting in Python.
 Shekar Ravi
