@@ -1,0 +1,13 @@
+# Windows Admin Toolkit (IT 390R)
+
+This project is my customized version of analyze_windows.py, created for the IT 390R Windows Admin Toolkit assignment. The script is written in Python and is meant to run directly on a Windows machine to help perform common system admin tasks. It pulls live data from the system—like event logs, installed software, and service status—and presents it clearly in the command line.
+
+The original script already included a few built-in features. The win-events task checks the Windows Security log for failed and successful logins. The win-pkgs task lists installed programs and can export them to a CSV file. And the win-services task checks whether specific Windows services are running, with an option to auto-restart them if they’re stopped.
+
+For this assignment, I added three new tasks to extend its functionality. First, I built win-startup, which reads from the Windows registry and lists the programs set to auto-start when the system boots. Then I created win-tasks, which lists scheduled tasks that are not from Microsoft, so it’s easier to spot user-defined or third-party jobs. Lastly, I added win-firewall, which scans the system’s inbound firewall rules and flags any that allow connections from all IP addresses—something that could pose a security risk if overlooked.
+
+All of these tasks run directly from the command line using flags like --task win-startup, and they don’t require any external input files. The only setup needed is to install Python 3.10+ along with the pywin32 and colorama packages. You also need to run PowerShell as Administrator to allow access to logs, services, and the registry.
+
+I included screenshots showing the output of each custom task—win-startup, win-tasks, and win-firewall—to demonstrate that they’re working correctly. The screenshots are saved in a screenshots/ folder along with the script.
+
+To build and test some of the more complex parts, like parsing scheduled task output or filtering firewall rules with regex, I used ChatGPT to generate starter code and refine the logic. Everything was reviewed and tested manually to make sure it worked as expected and handled errors properly.
